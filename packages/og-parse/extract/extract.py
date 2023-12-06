@@ -79,7 +79,7 @@ def _extract_opengraph_from_soup(soup: BeautifulSoup, exts: dict = _EXT) -> dict
 
 
 def extract_opengraph_from_html(html: str, exts: dict = _EXT) -> dict:
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features='lxml')
     return _extract_opengraph_from_soup(soup, exts=exts)
 
 
