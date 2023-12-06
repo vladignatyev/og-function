@@ -84,7 +84,7 @@ def extract_opengraph_from_html(html: str, exts: dict = _EXT) -> dict:
 
 
 def main(args):
-      url = args.get("url", "")#, "https://www.nytimes.com/2023/12/06/technology/ai-regulation-policies.html")
+      url = args.get("url", "")
 
       if not url.startswith('http'):
             return { "statusCode": HTTPStatus.BAD_REQUEST }
